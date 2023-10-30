@@ -1,0 +1,75 @@
+@font-face {
+    font-family: Barlow Condensed;
+    src: url(fonts/BarlowCondensed-Regular.ttf);
+}
+
+@font-face {
+    font-family: Barlow Semi Condensed;
+    src: url(fonts/BarlowSemiCondensed-Regular.ttf)
+}
+
+@font-face {
+    font-family: Bungee Outline;
+    src: url(fonts/BungeeOutline-Regular.ttf);
+}
+
+@font-face {
+    font-family: Bungee Shade;
+    src: url(fonts/BungeeShade-Regular.ttf);
+}
+
+body {
+    margin: 0;
+    background-image: url(images/pitbullbackground.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+ 
+.background {
+    height: 90vh;
+    width: 90vw;
+    background-color: rgba(0, 0, 0, 0.26);
+    border-radius: 20px;
+}
+
+header div {
+    font-size: 80px;
+    font-family: Bungee Shade;
+    margin: -25px 0 0 20px;
+    color: white;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+
+    gap: 5px;
+    padding: 15px;
+
+}
+
+nav > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+    width: 30vw;
+    background-color: rgba(255, 255, 255, 0.411);
+    border-radius: 5px;
+    font-size: 25px;
+    font-family: Barlow Semi Condensed;
+}
+
+nav > div:nth-child(2) {
+    border: solid 1px white;
+    font-weight: bold;
+    box-shadow: 0 0 6px 0 #fff5f5;
+}
