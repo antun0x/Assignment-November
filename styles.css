@@ -36,20 +36,21 @@ body {
     display: grid;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
  
 .background {
-    height: 90vh;
-    width: 90vw;
+    height: 1650px;
+    width: 80vw;
     background-color: rgba(0, 0, 0, 0.26);
     border-radius: 20px;
+
+    margin: 80px 0;
 }
 
 header div {
     font-size: 80px;
     font-family: Bungee Shade;
-    margin: 0 0 0 20px;
+    margin: 0 0 40px 20px;
     color: white;
 }
 
@@ -87,3 +88,86 @@ nav > div:not(:nth-child(2)):hover {
 }
 
 /* Första Rutan */
+main > div:first-child {
+ background-color: rgba(0, 0, 0, 0.446);
+ height: 600px;
+
+ margin: 70px 20px 0 20px;
+
+ border: solid white 1px;
+ border-radius: 20px;
+
+ display: grid;
+ grid-template-columns: 3fr 2fr;
+ grid-template-rows: repeat(5, 1fr);
+}
+
+main > div > div:first-child {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    margin: 15px;
+
+    font-size: 40px;
+    font-family: Bungee Outline;
+    
+    color: white;
+}
+
+main > div > div:nth-child(2) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    margin: 20px 15px;
+
+    font-size: 30px;
+    font-family: Barlow Condensed;
+    font-weight: bold;
+    
+    color: white;
+}
+
+main > div > div:nth-child(3) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    margin: 0px 15px;
+
+    font-size: 16px;
+    font-family: Barlow Semi Condensed;
+    font-weight: lighter;
+    
+    color: white;
+}
+
+main > div > div:nth-child(4) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    margin: 0px 50px;
+
+    font-size: 16px;
+    font-family: Barlow Semi Condensed;
+    font-weight: lighter;
+    
+    color: white;
+}
+
+main > div > div:nth-child(5) {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    margin: 0px 15px;
+
+    font-size: 16px;
+    font-family: Barlow Semi Condensed;
+    font-weight: lighter;
+    
+    color: white;
+}
+
+/* Andra Rutan */
+main > div:last-child {
+    background-color: rgba(0, 0, 0, 0.446);
+    height: 600px;
+   
+    margin: 15px 20px 0 20px;
+   
+    border: solid white 1px;
+    border-radius: 20px;
+   }
