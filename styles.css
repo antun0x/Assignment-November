@@ -20,11 +20,13 @@
     src: url(fonts/BungeeShade-Regular.ttf);
 }
 
+/* Allt */
 * {
     margin: 0;
     box-sizing: border-box;
 }
 
+/* Bakgrundsbild och Variabler */
 body {
     margin: 0;
     background-image: url(images/pitbullbackground.jpg);
@@ -36,6 +38,9 @@ body {
     display: grid;
     justify-content: center;
     align-items: center;
+
+    --marginh: 5px 0;
+    --marginw: 0 2px;
 }
  
 .background {
@@ -88,11 +93,12 @@ nav > div:not(:nth-child(2)):hover {
 }
 
 /* Första Rutan */
-main > div:first-child {
+#firstbox {
  background-color: rgba(0, 0, 0, 0.446);
  height: 600px;
 
  margin: 70px 20px 0 20px;
+ padding: 15px;
 
  border: solid white 1px;
  border-radius: 20px;
@@ -102,10 +108,9 @@ main > div:first-child {
  grid-template-rows: 1fr 1fr 2fr 1fr;
 }
 
-main > div > div:first-child {
+#firstbox > div:nth-child(1) {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-    margin: 5px 15px;
 
     font-size: 2.5vw;
     font-family: Bungee Outline;
@@ -113,22 +118,21 @@ main > div > div:first-child {
     color: white;
 }
 
-main > div > div:nth-child(2) {
+#firstbox > div:nth-child(2) {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-    margin: 40px 15px;
 
     font-size: 2vw;
     font-family: Barlow Condensed;
     font-weight: bold;
+    margin: 20px 0 0 0;
     
     color: white;
 }
 
-main > div > div:nth-child(3) {
+#firstbox > div:nth-child(3) {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
-    margin: 0px 15px;
 
     font-size: 1vw;
     font-family: Barlow Semi Condensed;
@@ -137,10 +141,9 @@ main > div > div:nth-child(3) {
     color: white;
 }
 
-main > div > div:nth-child(4) {
+#firstbox > div:nth-child(4) {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
-    margin: 0px 50px;
 
     font-size: 1vw;
     font-family: Barlow Semi Condensed;
@@ -149,10 +152,9 @@ main > div > div:nth-child(4) {
     color: white;
 }
 
-main > div > div:nth-child(5) {
+#firstbox > div:nth-child(5) {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
-    margin: 0px 15px;
 
     font-size: 1vw;
     font-family: Barlow Semi Condensed;
@@ -161,7 +163,7 @@ main > div > div:nth-child(5) {
     color: white;
 }
 
-/*Bottom Grid*/
+/*Första Bottom Grid*/
 .bottom1 {
     grid-column: 1 / 3;
     grid-row: 4 / 5;
@@ -169,6 +171,7 @@ main > div > div:nth-child(5) {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
     grid-template-rows: auto;
+    margin: var(--marginh);
 }
 
 .bottom1 > div:nth-child(1) {
@@ -176,7 +179,6 @@ main > div > div:nth-child(5) {
     grid-row: 1 / 2;
 
     background-color: yellow;
-    margin: 10px;
 
     font-size: 1vw;
 
@@ -188,9 +190,9 @@ main > div > div:nth-child(5) {
     grid-row: 1 / 2;
 
     background-color: yellow;
-    margin: 10px;
 
     font-size: 1vw;
+    margin: var(--marginw);
 
     border-radius: 10px 10px 10px 0px;
 }
@@ -212,8 +214,8 @@ main > div > div:nth-child(5) {
     font-size: 1vw;
     color: white;
     padding: 5px;
+    margin: var(--marginw);
 
-    margin: 10px 0;
     border-radius: 0px 10px 10px 10px;
 }
 
@@ -222,14 +224,14 @@ main > div > div:nth-child(5) {
     grid-row: 1 / 2;
 
     background-color: yellow;
-    margin: 10px;
 
     font-size: 1vw;
+    margin: var(--marginw);
 
     border-radius: 10px 10px 0px 10px;
 }
 
-/* Side Grid */
+/*Första Side Grid */
 .side1 {
     grid-column: 2 / 3;
     grid-row: 1 / 4;
@@ -237,6 +239,7 @@ main > div > div:nth-child(5) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 5fr 2fr;
+    margin: var(--marginh);
 }
 
 .side1 > div:nth-child(1) {
@@ -244,9 +247,11 @@ main > div > div:nth-child(5) {
     grid-row: 1 / 2;
 
     background-image: url(images/planet_pit_cover.jpg);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position:  ;
+    background-position:  center;
+
+    margin: 0 0 10px 0;
     
 }
 
@@ -256,8 +261,7 @@ main > div > div:nth-child(5) {
 
     background-color: yellow;
     border-radius: 0px 0px 0px 10px;
-
-    margin: 12px;
+    margin-right: 5px;
 
     font-size: 1vw;
 }
@@ -268,20 +272,196 @@ main > div > div:nth-child(5) {
 
     background-color: yellow;
     border-radius: 0px 0px 10px 0px;
-
-    margin: 12px;
+    margin-left: 5px;
 
     font-size: 1vw;
 }
 
 
 /* Andra Rutan */
-main > div:last-child {
+#secondbox {
     background-color: rgba(0, 0, 0, 0.446);
     height: 600px;
    
-    margin: 15px 20px 0 20px;
+    margin: 70px 20px 0 20px;
+    padding: 15px;
+    --marginh: 5px 0;
+    --marginw: 0 2px;
    
     border: solid white 1px;
     border-radius: 20px;
+   
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr 1fr 2fr 1fr;
    }
+
+#secondbox > div:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
+    font-size: 2.5vw;
+    font-family: Bungee Outline;
+    
+    color: white;
+   }
+
+#secondbox > div:nth-child(2) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
+    font-size: 2vw;
+    font-family: Barlow Condensed;
+    font-weight: bold;
+    margin: 20px 0 0 0;
+    
+    color: white;
+}
+
+#secondbox > div:nth-child(3) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+
+    font-size: 1vw;
+    font-family: Barlow Semi Condensed;
+    font-weight: lighter;
+    
+    color: white;
+}
+
+#secondbox > div:nth-child(4) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+
+    font-size: 1vw;
+    font-family: Barlow Semi Condensed;
+    font-weight: lighter;
+    
+    color: white;
+}
+
+#secondbox > div:nth-child(5) {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+
+    font-size: 1vw;
+    font-family: Barlow Semi Condensed;
+    font-weight: lighter;
+    
+    color: white;
+}
+
+
+
+/* Andra Bottom Grid */
+.bottom2 {
+    grid-column: 1 / 3;
+    grid-row: 4 / 5;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr 1fr;
+   }
+
+
+.bottom2 > div:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
+    background-color: yellow;
+
+    font-size: 1vw;
+    margin: var(--marginw);
+    border-radius: 10px 10px 10px 0px;
+}
+
+.bottom2 > div:nth-child(2) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+
+    background-color: yellow;
+
+    font-size: 1vw;
+    margin: var(--marginw);
+
+    border-radius: 0px 10px 10px 10px;
+}
+
+.bottom2 > div:nth-child(3) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+
+
+    display: flex;
+    align-items: end;
+
+    background-image: url(images/pitbull-globalwarming-concert.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    font-family: Barlow Semi Condensed;
+    font-size: 1vw;
+    color: white;
+    padding: 5px;
+    margin: var(--marginw);
+
+    border-radius: 0px 10px 10px 10px;
+}
+
+.bottom2 > div:nth-child(4) {
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+
+    background-color: yellow;
+
+    font-size: 1vw;
+    margin: var(--marginw);
+
+    border-radius: 10px 10px 0px 10px;
+}
+
+   /* Andra Side Grid */
+   .side2 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 5fr 2fr;
+    margin: var(--marginh);
+}
+
+.side2 > div:nth-child(1) {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+
+    background-image: url(images/global_warming_cover.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:  center;
+
+    margin: 0 0 10px 0;
+    
+}
+
+.side2 > div:nth-child(2) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+
+    background-color: yellow;
+    border-radius: 0px 0px 0px 10px;
+    margin-right: 5px;
+
+    font-size: 1vw;
+}
+
+.side2 > div:nth-child(3) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+    background-color: yellow;
+    border-radius: 0px 0px 10px 0px;
+    margin-left: 5px;
+
+    font-size: 1vw;
+}
