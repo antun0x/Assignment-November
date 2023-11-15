@@ -44,12 +44,19 @@ body {
 }
  
 .background {
-    height: 1650px;
+    height: auto;
     width: 80vw;
     background-color: rgba(0, 0, 0, 0.26);
     border-radius: 20px;
 
     margin: 80px 0;
+}
+
+.background p {
+    color: white;
+    font-size: 1vw;
+
+    margin: 30px 0 10px 10px;
 }
 
 header div {
@@ -95,7 +102,7 @@ nav > div:not(:nth-child(2)):hover {
 /* Första Rutan */
 #firstbox {
  background-color: rgba(0, 0, 0, 0.446);
- height: 600px;
+ height: 700px;
 
  margin: 70px 20px 0 20px;
  padding: 15px;
@@ -105,7 +112,7 @@ nav > div:not(:nth-child(2)):hover {
 
  display: grid;
  grid-template-columns: 3fr 2fr;
- grid-template-rows: 1fr 1fr 2fr 1fr;
+ grid-template-rows: repeat(8, 1fr);
 }
 
 #firstbox > div:nth-child(1) {
@@ -125,7 +132,6 @@ nav > div:not(:nth-child(2)):hover {
     font-size: 2vw;
     font-family: Barlow Condensed;
     font-weight: bold;
-    margin: 20px 0 0 0;
     
     color: white;
 }
@@ -133,6 +139,7 @@ nav > div:not(:nth-child(2)):hover {
 #firstbox > div:nth-child(3) {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+    margin: 15px 0 0 0;
 
     font-size: 1vw;
     font-family: Barlow Semi Condensed;
@@ -144,6 +151,7 @@ nav > div:not(:nth-child(2)):hover {
 #firstbox > div:nth-child(4) {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+    margin: 15px 0 0 20px;
 
     font-size: 1vw;
     font-family: Barlow Semi Condensed;
@@ -155,6 +163,7 @@ nav > div:not(:nth-child(2)):hover {
 #firstbox > div:nth-child(5) {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
+    margin: 30px 0 0 0;
 
     font-size: 1vw;
     font-family: Barlow Semi Condensed;
@@ -163,125 +172,10 @@ nav > div:not(:nth-child(2)):hover {
     color: white;
 }
 
-/*Första Bottom Grid*/
-.bottom1 {
-    grid-column: 1 / 3;
-    grid-row: 4 / 5;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
-    grid-template-rows: auto;
-    margin: var(--marginh);
-}
-
-.bottom1 > div:nth-child(1) {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-
-    background-color: yellow;
-
-    font-size: 1vw;
-
-    border-radius: 10px 0px 10px 10px;
-}
-
-.bottom1 > div:nth-child(2) {
-    grid-column: 3 / 4;
-    grid-row: 1 / 2;
-
-    background-color: yellow;
-
-    font-size: 1vw;
-    margin: var(--marginw);
-
-    border-radius: 10px 10px 10px 0px;
-}
-
-.bottom1 > div:nth-child(3) {
-    grid-column: 4 / 5;
-    grid-row: 1 / 2;
-
-
-    display: flex;
-    align-items: end;
-
-    background-image: url(images/djbuddha-producer.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    
-    font-family: Barlow Semi Condensed;
-    font-size: 1vw;
-    color: white;
-    padding: 5px;
-    margin: var(--marginw);
-
-    border-radius: 0px 10px 10px 10px;
-}
-
-.bottom1 > div:nth-child(4) {
-    grid-column: 5 / 6;
-    grid-row: 1 / 2;
-
-    background-color: yellow;
-
-    font-size: 1vw;
-    margin: var(--marginw);
-
-    border-radius: 10px 10px 0px 10px;
-}
-
-/*Första Side Grid */
-.side1 {
-    grid-column: 2 / 3;
-    grid-row: 1 / 4;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 5fr 2fr;
-    margin: var(--marginh);
-}
-
-.side1 > div:nth-child(1) {
-    grid-column: 1 / 3;
-    grid-row: 1 / 2;
-
-    background-image: url(images/planet_pit_cover.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position:  center;
-
-    margin: 0 0 10px 0;
-    
-}
-
-.side1 > div:nth-child(2) {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-
-    background-color: yellow;
-    border-radius: 0px 0px 0px 10px;
-    margin-right: 5px;
-
-    font-size: 1vw;
-}
-
-.side1 > div:nth-child(3) {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-
-    background-color: yellow;
-    border-radius: 0px 0px 10px 0px;
-    margin-left: 5px;
-
-    font-size: 1vw;
-}
-
-
 /* Andra Rutan */
 #secondbox {
     background-color: rgba(0, 0, 0, 0.446);
-    height: 600px;
+    height: 700px;
    
     margin: 70px 20px 0 20px;
     padding: 15px;
@@ -293,7 +187,7 @@ nav > div:not(:nth-child(2)):hover {
    
     display: grid;
     grid-template-columns: 3fr 2fr;
-    grid-template-rows: 1fr 1fr 2fr 1fr;
+    grid-template-rows: repeat(8, 1fr);
    }
 
 #secondbox > div:nth-child(1) {
@@ -313,7 +207,6 @@ nav > div:not(:nth-child(2)):hover {
     font-size: 2vw;
     font-family: Barlow Condensed;
     font-weight: bold;
-    margin: 20px 0 0 0;
     
     color: white;
 }
@@ -321,6 +214,7 @@ nav > div:not(:nth-child(2)):hover {
 #secondbox > div:nth-child(3) {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+    margin: 15px 0 0 0;
 
     font-size: 1vw;
     font-family: Barlow Semi Condensed;
@@ -332,6 +226,7 @@ nav > div:not(:nth-child(2)):hover {
 #secondbox > div:nth-child(4) {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+    margin: 15px 0 0 20px;
 
     font-size: 1vw;
     font-family: Barlow Semi Condensed;
@@ -343,6 +238,7 @@ nav > div:not(:nth-child(2)):hover {
 #secondbox > div:nth-child(5) {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
+    margin: 30px 0 0 0;
 
     font-size: 1vw;
     font-family: Barlow Semi Condensed;
@@ -351,12 +247,97 @@ nav > div:not(:nth-child(2)):hover {
     color: white;
 }
 
+/*Första Bottom Grid*/
+.bottom1 {
+    grid-column: 1 / 3;
+    grid-row: 7 / 9;
 
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+    grid-template-rows: auto;
+    margin: var(--marginh);
+}
+
+.bottom1 > div:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
+    background-color: whitesmoke;
+
+    font-family: Barlow Condensed;
+    font-size: 1vw;
+    padding: 0 10px;
+
+    border-radius: 10px 0px 10px 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom1 > div:nth-child(2) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+
+    background-color: whitesmoke;
+
+    font-family: Barlow Condensed;
+    font-size: 1vw;
+    padding: 0 10px;
+    margin: var(--marginw);
+
+    border-radius: 10px 10px 10px 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom1 > div:nth-child(3) {
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+
+
+    display: flex;
+    align-items: end;
+
+    background-image: url(images/djbuddha-producer.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    font-family: Barlow Condensed;
+    font-size: 1vw;
+    color: white;
+    padding: 5px;
+    margin: var(--marginw);
+
+    border-radius: 0px 10px 10px 10px;
+}
+
+.bottom1 > div:nth-child(4) {
+    grid-column: 5 / 6;
+    grid-row: 1 / 2;
+
+    background-color: whitesmoke;
+
+    font-family: Barlow Condensed;
+    font-size: 1vw;
+
+    padding: 0 10px;
+    margin: var(--marginw);
+
+    border-radius: 10px 10px 0px 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* Andra Bottom Grid */
 .bottom2 {
     grid-column: 1 / 3;
-    grid-row: 4 / 5;
+    grid-row: 7 / 9;
 
     display: grid;
     grid-template-columns: 2fr 1fr 2fr 1fr;
@@ -367,23 +348,32 @@ nav > div:not(:nth-child(2)):hover {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
 
-    background-color: yellow;
+    background-color: whitesmoke;
 
+    padding: 0 10px;
     font-size: 1vw;
     margin: var(--marginw);
     border-radius: 10px 10px 10px 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .bottom2 > div:nth-child(2) {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
 
-    background-color: yellow;
+    background-color: whitesmoke;
 
+    padding: 0 10px;
     font-size: 1vw;
     margin: var(--marginw);
-
     border-radius: 0px 10px 10px 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .bottom2 > div:nth-child(3) {
@@ -412,56 +402,146 @@ nav > div:not(:nth-child(2)):hover {
     grid-column: 4 / 5;
     grid-row: 1 / 2;
 
-    background-color: yellow;
+    background-color: whitesmoke;
 
+    padding: 0 10px;
     font-size: 1vw;
     margin: var(--marginw);
-
     border-radius: 10px 10px 0px 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-   /* Andra Side Grid */
-   .side2 {
+/*Första Side Grid */
+.side1 {
     grid-column: 2 / 3;
-    grid-row: 1 / 4;
+    grid-row: 1 / 7;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 5fr 2fr;
+    grid-template-rows: 3fr 1fr;
     margin: var(--marginh);
 }
 
-.side2 > div:nth-child(1) {
+.side1 > img:first-of-type {
     grid-column: 1 / 3;
     grid-row: 1 / 2;
+    z-index: 2;
+    transition: opacity 1s;
 
-    background-image: url(images/global_warming_cover.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position:  center;
-
-    margin: 0 0 10px 0;
+    object-fit: cover;
     
 }
 
-.side2 > div:nth-child(2) {
+.side1 > img:first-of-type:hover {
+    opacity: 0;
+}
+
+.side1 > img:nth-child(2) {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    z-index: 1;
+
+    object-fit: cover;
+    
+}
+
+.side1 > div:nth-child(3) {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
 
-    background-color: yellow;
+    background-color: rgb(43, 43, 233);
     border-radius: 0px 0px 0px 10px;
     margin-right: 5px;
-
+    padding: 8px;
     font-size: 1vw;
 }
 
-.side2 > div:nth-child(3) {
+.side1 > div:nth-child(4) {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
 
-    background-color: yellow;
+    background-color: rgb(43, 43, 233);
     border-radius: 0px 0px 10px 0px;
     margin-left: 5px;
-
+    padding: 8px;
     font-size: 1vw;
+}
+
+.side1 > div > h3 {
+    font-family: Barlow Condensed;
+    margin: 0 0 0 10px;
+}
+
+.side1 > div > ol {
+    font-family: Barlow Semi Condensed;
+    margin: 0 0 0 -15px;
+}
+
+/* Andra Side Grid */
+.side2 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 7;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3fr 1fr;
+    margin: var(--marginh);
+}
+
+.side2 > img:first-of-type {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    z-index: 2;
+    transition: opacity 1s;
+
+    object-fit: cover;
+    
+}
+
+.side2 > img:first-of-type:hover {
+    opacity: 0;
+}
+
+.side2 > img:nth-child(2) {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    z-index: 1;
+
+    object-fit: cover;
+    
+}
+
+.side2 > div:nth-child(3) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+
+    background-color: rgb(233, 113, 43);
+    border-radius: 0px 0px 0px 10px;
+    margin-right: 5px;
+    padding: 8px;
+    font-size: 1vw;
+}
+
+.side2 > div:nth-child(4) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+    background-color: rgb(233, 113, 43);
+    border-radius: 0px 0px 10px 0px;
+    margin-left: 5px;
+    padding: 8px;
+    font-size: 1vw;
+}
+
+.side2 > div > h3 {
+    font-family: Barlow Condensed;
+    margin: 0 0 0 10px;
+}
+
+.side2 > div > ol {
+    font-family: Barlow Condensed;
+    margin: 0 0 0 -15px;
 }
