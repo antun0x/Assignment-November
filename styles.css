@@ -52,17 +52,17 @@ body {
     margin: 80px 0;
 }
 
-.background p {
+.background footer {
     color: white;
     font-size: 1vw;
 
     margin: 30px 0 10px 10px;
 }
 
-header div {
+header h1 {
     font-size: 5vw;
     font-family: Bungee Shade;
-    margin: 0 0 40px 20px;
+    margin: 0 0 0 20px;
     color: white;
 }
 
@@ -99,8 +99,8 @@ nav > div:not(:nth-child(2)):hover {
     color: white;
 }
 
-/* Första Rutan */
-#firstbox {
+/* Första och Andra Rutorna */
+#firstbox, #secondbox {
  background-color: rgba(0, 0, 0, 0.446);
  height: 700px;
 
@@ -115,7 +115,7 @@ nav > div:not(:nth-child(2)):hover {
  grid-template-rows: repeat(8, 1fr);
 }
 
-#firstbox > div:nth-child(1) {
+#firstbox > h1, #secondbox > h1 {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
 
@@ -125,10 +125,11 @@ nav > div:not(:nth-child(2)):hover {
     color: white;
 }
 
-#firstbox > div:nth-child(2) {
+#firstbox > h2, #secondbox > h2 {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
 
+    margin: 50px 0 0 0;
     font-size: 2vw;
     font-family: Barlow Condensed;
     font-weight: bold;
@@ -136,7 +137,7 @@ nav > div:not(:nth-child(2)):hover {
     color: white;
 }
 
-#firstbox > div:nth-child(3) {
+#firstbox > h3, #secondbox > h3 {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     margin: 15px 0 0 0;
@@ -148,23 +149,13 @@ nav > div:not(:nth-child(2)):hover {
     color: white;
 }
 
-#firstbox > div:nth-child(4) {
+#firstbox > ul, #secondbox > ul {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
-    margin: 15px 0 0 20px;
 
-    font-size: 1vw;
-    font-family: Barlow Semi Condensed;
-    font-weight: lighter;
-    
-    color: white;
-}
-
-#firstbox > div:nth-child(5) {
-    grid-column: 1 / 2;
-    grid-row: 3 / 4;
+    padding-left: 30px;
     margin: 30px 0 0 0;
-
+    list-style-type: none;
     font-size: 1vw;
     font-family: Barlow Semi Condensed;
     font-weight: lighter;
@@ -172,73 +163,9 @@ nav > div:not(:nth-child(2)):hover {
     color: white;
 }
 
-/* Andra Rutan */
-#secondbox {
-    background-color: rgba(0, 0, 0, 0.446);
-    height: 700px;
-   
-    margin: 70px 20px 0 20px;
-    padding: 15px;
-    --marginh: 5px 0;
-    --marginw: 0 2px;
-   
-    border: solid white 1px;
-    border-radius: 20px;
-   
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    grid-template-rows: repeat(8, 1fr);
-   }
-
-#secondbox > div:nth-child(1) {
+#firstbox > p, #secondbox > p {
     grid-column: 1 / 2;
-    grid-row: 1 / 2;
-
-    font-size: 2.5vw;
-    font-family: Bungee Outline;
-    
-    color: white;
-   }
-
-#secondbox > div:nth-child(2) {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-
-    font-size: 2vw;
-    font-family: Barlow Condensed;
-    font-weight: bold;
-    
-    color: white;
-}
-
-#secondbox > div:nth-child(3) {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-    margin: 15px 0 0 0;
-
-    font-size: 1vw;
-    font-family: Barlow Semi Condensed;
-    font-weight: lighter;
-    
-    color: white;
-}
-
-#secondbox > div:nth-child(4) {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-    margin: 15px 0 0 20px;
-
-    font-size: 1vw;
-    font-family: Barlow Semi Condensed;
-    font-weight: lighter;
-    
-    color: white;
-}
-
-#secondbox > div:nth-child(5) {
-    grid-column: 1 / 2;
-    grid-row: 3 / 4;
-    margin: 30px 0 0 0;
+    grid-row: 4 / 5;
 
     font-size: 1vw;
     font-family: Barlow Semi Condensed;
@@ -258,7 +185,7 @@ nav > div:not(:nth-child(2)):hover {
     margin: var(--marginh);
 }
 
-.bottom1 > div:nth-child(1) {
+.bottom1 > p:nth-child(1) {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
 
@@ -275,7 +202,7 @@ nav > div:not(:nth-child(2)):hover {
     align-items: center;
 }
 
-.bottom1 > div:nth-child(2) {
+.bottom1 > p:nth-child(2) {
     grid-column: 3 / 4;
     grid-row: 1 / 2;
 
@@ -293,29 +220,7 @@ nav > div:not(:nth-child(2)):hover {
     align-items: center;
 }
 
-.bottom1 > div:nth-child(3) {
-    grid-column: 4 / 5;
-    grid-row: 1 / 2;
-
-
-    display: flex;
-    align-items: end;
-
-    background-image: url(images/djbuddha-producer.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    
-    font-family: Barlow Condensed;
-    font-size: 1vw;
-    color: white;
-    padding: 5px;
-    margin: var(--marginw);
-
-    border-radius: 0px 10px 10px 10px;
-}
-
-.bottom1 > div:nth-child(4) {
+.bottom1 > p:nth-child(4) {
     grid-column: 5 / 6;
     grid-row: 1 / 2;
 
@@ -334,6 +239,28 @@ nav > div:not(:nth-child(2)):hover {
     align-items: center;
 }
 
+.bottom1 > h3 {
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+
+
+    display: flex;
+    align-items: end;
+
+    background-image: url(images/djbuddha-producer.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    font-family: Barlow Semi Condensed;
+    font-size: 1vw;
+    color: white;
+    padding: 5px;
+    margin: var(--marginw);
+
+    border-radius: 0px 10px 10px 10px;
+}
+
 /* Andra Bottom Grid */
 .bottom2 {
     grid-column: 1 / 3;
@@ -344,7 +271,7 @@ nav > div:not(:nth-child(2)):hover {
    }
 
 
-.bottom2 > div:nth-child(1) {
+.bottom2 > p:nth-child(1) {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
 
@@ -360,7 +287,7 @@ nav > div:not(:nth-child(2)):hover {
     align-items: center;
 }
 
-.bottom2 > div:nth-child(2) {
+.bottom2 > p:nth-child(2) {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
 
@@ -376,7 +303,7 @@ nav > div:not(:nth-child(2)):hover {
     align-items: center;
 }
 
-.bottom2 > div:nth-child(3) {
+.bottom2 > h3 {
     grid-column: 3 / 4;
     grid-row: 1 / 2;
 
@@ -398,7 +325,7 @@ nav > div:not(:nth-child(2)):hover {
     border-radius: 0px 10px 10px 10px;
 }
 
-.bottom2 > div:nth-child(4) {
+.bottom2 > p:nth-child(4) {
     grid-column: 4 / 5;
     grid-row: 1 / 2;
 
@@ -415,7 +342,7 @@ nav > div:not(:nth-child(2)):hover {
 }
 
 /*Första Side Grid */
-.side1 {
+.side1, .side2 {
     grid-column: 2 / 3;
     grid-row: 1 / 7;
 
@@ -425,7 +352,7 @@ nav > div:not(:nth-child(2)):hover {
     margin: var(--marginh);
 }
 
-.side1 > img:first-of-type {
+.side1 > img:first-of-type, .side2 > img:first-of-type {
     grid-column: 1 / 3;
     grid-row: 1 / 2;
     z-index: 2;
@@ -435,11 +362,11 @@ nav > div:not(:nth-child(2)):hover {
     
 }
 
-.side1 > img:first-of-type:hover {
+.side1 > img:first-of-type:hover, .side2 > img:first-of-type:hover {
     opacity: 0;
 }
 
-.side1 > img:nth-child(2) {
+.side1 > img:nth-child(2), .side2 > img:nth-child(2) {
     grid-column: 1 / 3;
     grid-row: 1 / 2;
     z-index: 1;
@@ -448,7 +375,7 @@ nav > div:not(:nth-child(2)):hover {
     
 }
 
-.side1 > div:nth-child(3) {
+.side1 > div:nth-child(3), .side2 > div:nth-child(3) {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
 
@@ -459,7 +386,7 @@ nav > div:not(:nth-child(2)):hover {
     font-size: 1vw;
 }
 
-.side1 > div:nth-child(4) {
+.side1 > div:nth-child(4), .side2 > div:nth-child(4) {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
 
@@ -468,80 +395,76 @@ nav > div:not(:nth-child(2)):hover {
     margin-left: 5px;
     padding: 8px;
     font-size: 1vw;
-}
-
-.side1 > div > h3 {
-    font-family: Barlow Condensed;
-    margin: 0 0 0 10px;
-}
-
-.side1 > div > ol {
-    font-family: Barlow Semi Condensed;
-    margin: 0 0 0 -15px;
-}
-
-/* Andra Side Grid */
-.side2 {
-    grid-column: 2 / 3;
-    grid-row: 1 / 7;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 3fr 1fr;
-    margin: var(--marginh);
-}
-
-.side2 > img:first-of-type {
-    grid-column: 1 / 3;
-    grid-row: 1 / 2;
-    z-index: 2;
-    transition: opacity 1s;
-
-    object-fit: cover;
-    
-}
-
-.side2 > img:first-of-type:hover {
-    opacity: 0;
-}
-
-.side2 > img:nth-child(2) {
-    grid-column: 1 / 3;
-    grid-row: 1 / 2;
-    z-index: 1;
-
-    object-fit: cover;
-    
 }
 
 .side2 > div:nth-child(3) {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-
     background-color: rgb(233, 113, 43);
-    border-radius: 0px 0px 0px 10px;
-    margin-right: 5px;
-    padding: 8px;
-    font-size: 1vw;
 }
 
 .side2 > div:nth-child(4) {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-
     background-color: rgb(233, 113, 43);
-    border-radius: 0px 0px 10px 0px;
-    margin-left: 5px;
-    padding: 8px;
-    font-size: 1vw;
 }
 
-.side2 > div > h3 {
+.side1 > div > h3, .side2 > div > h3 {
     font-family: Barlow Condensed;
     margin: 0 0 0 10px;
 }
 
-.side2 > div > ol {
-    font-family: Barlow Condensed;
-    margin: 0 0 0 -15px;
+.side1 > div > ol, .side2 > div > ol {
+    font-family: Barlow Semi Condensed;
+    padding-left: 20px;
 }
+
+@media (min-width: 1200px) {
+    body > * {
+      max-width: 1200px;
+    }
+
+    header h1 {
+        font-size: 60px;
+    }
+
+    nav > div {
+        font-size: 18px;
+    }
+
+    #firstbox > h1, #secondbox > h1  {
+        font-size: 30px;
+    }
+
+    #firstbox > h2, #secondbox > h2 {
+        font-size: 24px;
+    }
+
+    #firstbox > h3, #secondbox > h3 {
+        font-size: 12px;
+    }
+
+    #firstbox ul, #secondbox ul {
+        font-size: 12px;
+    }
+
+    #firstbox p, #secondbox p {
+        font-size: 12px;
+    }
+
+    .bottom1 div, .bottom2 div {
+        font-size: 15px;
+    }
+
+    .bottom1 h3, .bottom2 h3 {
+        font-size: 15px;
+    }
+
+    .side1 h3, .side2 h3 {
+        font-size: 15px;
+    }
+
+    .side1 ol, .side2 ol {
+        font-size: 15px;
+    }
+
+    footer h3 {
+        font-size: 12px;
+    }
+  }
