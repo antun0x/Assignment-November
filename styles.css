@@ -113,12 +113,12 @@ nav > div:not(:nth-child(2)):hover {
 
  display: grid;
  grid-template-columns: 3fr 2fr;
- grid-template-rows: repeat(8, 1fr);
+ grid-template-rows: auto;
 }
 
 #firstbox > h1, #secondbox > h1 {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
+    grid-column: 1;
+    grid-row: 1;
 
     font-size: 3.2vw;
     font-family: Bungee Outline;
@@ -127,8 +127,8 @@ nav > div:not(:nth-child(2)):hover {
 }
 
 #firstbox > h2, #secondbox > h2 {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
+    grid-column: 1;
+    grid-row: 1;
 
     margin: 50px 0 0 0;
     font-size: 2.5vw;
@@ -139,8 +139,8 @@ nav > div:not(:nth-child(2)):hover {
 }
 
 #firstbox > h3, #secondbox > h3 {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
+    grid-column: 1;
+    grid-row: 2;
     margin: 35px 0 0 0;
 
     font-size: 1.3vw;
@@ -151,8 +151,8 @@ nav > div:not(:nth-child(2)):hover {
 }
 
 #firstbox > ul, #secondbox > ul {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
+    grid-column: 1;
+    grid-row: 2;
 
     padding-left: 30px;
     margin: 50px 0 0 0;
@@ -165,8 +165,8 @@ nav > div:not(:nth-child(2)):hover {
 }
 
 #firstbox > p, #secondbox > p {
-    grid-column: 1 / 2;
-    grid-row: 4 / 5;
+    grid-column: 1;
+    grid-row: 4;
 
     font-size: 1.3vw;
     font-family: Barlow Semi Condensed;
@@ -191,15 +191,14 @@ nav > div:not(:nth-child(2)):hover {
     grid-row: 1 / 2;
 
     background-color: whitesmoke;
-
+    color: rgb(53, 53, 223);
     font-family: Barlow Condensed;
     font-size: 1.3vw;
-    padding: 0 10px;
-
+    padding: 10px;
+    height: 150px;
     border-radius: 30px 0px 30px 30px;
 
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
@@ -208,7 +207,7 @@ nav > div:not(:nth-child(2)):hover {
     grid-row: 1 / 2;
 
     background-color: whitesmoke;
-
+    color: rgb(53, 53, 223);
     font-family: Barlow Condensed;
     font-size: 1.3vw;
     padding: 0 10px;
@@ -217,7 +216,6 @@ nav > div:not(:nth-child(2)):hover {
     border-radius: 30px 30px 30px 0px;
 
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
@@ -226,7 +224,7 @@ nav > div:not(:nth-child(2)):hover {
     grid-row: 1 / 2;
 
     background-color: whitesmoke;
-
+    color: rgb(53, 53, 223);
     font-family: Barlow Condensed;
     font-size: 1.3vw;
 
@@ -236,7 +234,6 @@ nav > div:not(:nth-child(2)):hover {
     border-radius: 30px 30px 0px 30px;
 
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
@@ -278,14 +275,14 @@ nav > div:not(:nth-child(2)):hover {
     grid-row: 1 / 2;
 
     background-color: whitesmoke;
-
-    padding: 0 10px;
+    color: rgb(223, 121, 53);
+    font-family: Barlow Condensed;
     font-size: 1.3vw;
-    margin: var(--marginw);
+    padding: 10px;
+    height: 150px;
     border-radius: 30px 30px 30px 0px;
 
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
@@ -294,14 +291,30 @@ nav > div:not(:nth-child(2)):hover {
     grid-row: 1 / 2;
 
     background-color: whitesmoke;
-
+    color: rgb(223, 121, 53);
     padding: 0 10px;
     font-size: 1.3vw;
+    font-family: Barlow Semi Condensed;
     margin: var(--marginw);
     border-radius: 0px 30px 30px 30px;
 
     display: flex;
-    justify-content: center;
+    align-items: center;
+}
+
+.bottom2 > p:nth-child(4) {
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+
+    background-color: whitesmoke;
+    color: rgb(223, 121, 53);
+    padding: 0 10px;
+    font-size: 1.3vw;
+    font-family: Barlow Semi Condensed;
+    margin: var(--marginw);
+    border-radius: 30px 30px 0px 30px;
+
+    display: flex;
     align-items: center;
 }
 
@@ -327,23 +340,6 @@ nav > div:not(:nth-child(2)):hover {
 
     border-radius: 0px 30px 30px 30px;
 }
-
-.bottom2 > p:nth-child(4) {
-    grid-column: 4 / 5;
-    grid-row: 1 / 2;
-
-    background-color: whitesmoke;
-
-    padding: 0 10px;
-    font-size: 1.3vw;
-    margin: var(--marginw);
-    border-radius: 30px 30px 0px 30px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 /*Första och Andra Side Grid */
 .side1, .side2 {
     grid-column: 2 / 3;
@@ -389,6 +385,7 @@ nav > div:not(:nth-child(2)):hover {
     border-radius: 0px 0px 0px 30px;
     padding: 8px;
     margin-right: 5px;
+    margin-bottom: 10px;
     font-size: 1.3vw;
 }
 
@@ -399,6 +396,7 @@ nav > div:not(:nth-child(2)):hover {
     background-color: rgb(43, 43, 233);
     border-radius: 0px 0px 30px 0px;
     padding: 8px;
+    margin-bottom: 10px;
     margin-left: 5px;
     font-size: 1.3vw;
 }
@@ -414,13 +412,16 @@ nav > div:not(:nth-child(2)):hover {
 .side1 > div > h3, .side2 > div > h3 {
     font-family: Barlow Condensed;
     margin: 0 0 0 10px;
+    color: rgb(45, 209, 195)
 }
 
 .side1 > div > ol, .side2 > div > ol {
     font-family: Barlow Semi Condensed;
     padding-left: 20px;
+    color: white;
 }
 
+/* Media Queries */
 @media (min-width: 800px) and (max-width: 900px) {
     header h1 {
         font-size: 60px;
@@ -466,7 +467,7 @@ nav > div:not(:nth-child(2)):hover {
         font-size: 12px;
     }
 
-    footer h3 {
+    .background footer h3 {
         font-size: 14px;
     }
 }
@@ -520,7 +521,7 @@ nav > div:not(:nth-child(2)):hover {
         font-size: 15px;
     }
 
-    footer > h3 {
+    .background footer > h3 {
         font-size: 15px;
     }
 }
@@ -533,49 +534,50 @@ nav > div:not(:nth-child(2)):hover {
     }
     
     header h1 {
-        font-size: 40px;
+        font-size: 15vw;
         text-align: center;
     }
     
     nav, nav div {
         padding: 10px;
-        font-size: 15px;
+        font-size: 4vw;
     }
 
     #firstbox, #secondbox {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(11, 1fr);
+        grid-template-rows: repeat auto;
     }
 
     #firstbox > h1, #secondbox > h1  {
         grid-row: 7 / 8;
         grid-column: 2 / 3;
-        font-size: 25px;
+        font-size: 8vw;
     }
 
     #firstbox > h2, #secondbox > h2 {
         grid-row: 7 / 8;
         grid-column: 2 / 3;
-        font-size: 15px;
+        font-size: 6vw;
         margin-top: 40px;
     }
 
     #firstbox > h3, #secondbox > h3 {
         grid-row: 8 / 9;
         grid-column: 2 / 3;
-        font-size: 12px;
+        font-size: 3vw;
     }
 
     #firstbox ul, #secondbox ul {
         grid-row: 8 / 9;
         grid-column: 2 / 3;
-        font-size: 12px;
+        font-size: 3vw;
+        margin-bottom: 40px;
     }
 
     #firstbox > p, #secondbox > p {
         grid-row: 9 / 10;
         grid-column: 2 / 3;
-        font-size: 15px;
+        font-size: 3vw;
     }
 
     .bottom1 {
@@ -588,26 +590,30 @@ nav > div:not(:nth-child(2)):hover {
     .bottom1 > p:nth-child(1) {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
-        font-size: 10px;
-
+        font-size: 3vw;
+        margin: 0 3px 0 0;
     }
 
     .bottom1 > p:nth-child(2) {
         grid-column: 2 / 4;
         grid-row: 1 / 2;
-        font-size: 10px;
+        font-size: 3vw;
+        margin-bottom: 5px;
+
     }
     
     .bottom1 > h3 {
         grid-column: 2 / 3;
         grid-row: 2 / 3;
-        font-size: 10px;
+        font-size: 3vw;
+
     }
 
     .bottom1 > p:nth-child(4) {
         grid-column: 3 / 4;
         grid-row: 2 / 3;
-        font-size: 10px;
+        font-size: 3vw;
+
     }
     
     .bottom2 {
@@ -620,40 +626,50 @@ nav > div:not(:nth-child(2)):hover {
     .bottom2 > p:nth-child(1) {
         grid-column: 1 / 3;
         grid-row: 1 / 2;
-        font-size: 10px;
-
+        font-size: 3vw;
+        margin: 0 3px 5px 0;
     }
 
     .bottom2 > p:nth-child(2) {
         grid-column: 3 / 4;
         grid-row: 1 / 2;
-        font-size: 10px;
+        font-size: 3vw;
+        margin-bottom: 5px;
     }
     
     .bottom2 > h3 {
         grid-column: 1 / 3;
         grid-row: 2 / 3;
-        font-size: 10px;
+        font-size: 3vw;
     }
 
     .bottom2 > p:nth-child(4) {
         grid-column: 3 / 4;
         grid-row: 2 / 3;
-        font-size: 10px;
+        font-size: 3vw;
     }
     
     
     .side1 h3, .side2 h3 {
-        font-size: 12px;
+        font-size: 5vw;
     }
 
     .side1 ol, .side2 ol {
-        font-size: 12px;
+        font-size: 3vw;
     }
 
     .side1 > img:first-of-type, .side2 > img:first-of-type {
         grid-column: 1 / 4;
         max-height: 100%;
+        margin-bottom: 10px;
+    }
+
+    .side1 > img:first-of-type:hover, .side2 > img:first-of-type:hover {
+        opacity: 1;
+    }
+
+    .side1 > img:nth-child(2), .side2 > img:nth-child(2) {
+        display: none;
     }
    
     .side1 > div:nth-child(4), .side2 > div:nth-child(4) {
@@ -664,8 +680,9 @@ nav > div:not(:nth-child(2)):hover {
         grid-row: 2 / 3;
     }
 
-    footer > h3 {
-        font-size: 12px;
+    .background footer > h3 {
+        font-size: 3.5vw;
+        margin: 50px 0 0 0;
         text-align: center;
     }
 }
