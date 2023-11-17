@@ -551,13 +551,13 @@ nav > div:not(:nth-child(2)):hover {
     #firstbox > h1, #secondbox > h1  {
         grid-row: 7 / 8;
         grid-column: 2 / 3;
-        font-size: 8vw;
+        font-size: 7vw;
     }
 
     #firstbox > h2, #secondbox > h2 {
         grid-row: 7 / 8;
         grid-column: 2 / 3;
-        font-size: 6vw;
+        font-size: 5vw;
         margin-top: 40px;
     }
 
