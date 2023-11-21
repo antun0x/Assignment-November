@@ -473,8 +473,8 @@ nav > div:not(:nth-child(2)):hover {
 }
 
 @media (min-width: 1200px) {
-    body > * {
-      max-width: 1200px;
+    .background {
+      width: 1200px;
     }
 
     header h1 {
